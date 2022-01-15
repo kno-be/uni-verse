@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>JS Fetch API</title>
+    </head>
+    <body>
+        <h1>Random images of dogs:</h1>
+        <img src="" id="img_dog" alt="Waiting content to be loaded..."> </br>
+        <button onclick="loadImage()">Load different image</button>
+    </body>
+
+    <script type="text/javascript">
+        var url = "https://dog.ceo/api/breeds/image/random"
+
+        function loadImage() {
+            fetch(url, {
+            method: 'get'
+        }).then(function(response){
+            response.json().then(function(data) {
+                console.log("Request result:" + data.message)
+                var imgDog = document.getElementById("img_dog")
+                imgDog.src = data.message
+            })
+        }).catch(function(err) {
+            console.error("Error: " + err)
+        })}
+
+
+    </script>
+</html>

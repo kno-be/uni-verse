@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	
+	<head>
+		<meta charset = "utf-8">
+		<title>Ajax Example</title>
+		
+	</head>
+	
+	<body>
+		<h1>Random images of dogs:</h1>
+		<img id="img_dog" alt="Waiting content to be loaded..." />
+		</br>
+		<button onclick="loadImage()"> Load different image </button>
+	</body>
+	
+	<script type="text/javascript">
+		function loadImage(){
+			var xmlHttpRequest = new XMLHttpRequest()
+			var url = "https://dog.ceo/api/breeds/image/random"
+			
+			xmlHttpRequest.open("GET", url, true)
+			xmlHttpRequest.onreadystatechange = function(){
+				if(xmlHttpRequest.readyState == 3) {
+					console.log("Loading content...")
+				}
+				if(xmlHttpRequest.readyState == 4) {
+					var jsonResponse = JSON.parse(xmlHttpRequest.responseText)
+					console.log("Done :)")
+					console.log("Request result: " + jsonResponse)
+					console.log("Request result: " + jsonResponse.message)
+					var imgDog = document.getElementById("img_dog")
+					imgDog.src = jsonResponse.message
+				}
+			}
+			xmlHttpRequest.send(null);
+		}
+	</script>
+	
+</html>
