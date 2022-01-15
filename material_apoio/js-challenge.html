@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset = "utf-8">
+		<title>JS Estacio</title>
+	</head>
+	<body>
+	</body>
+	
+	<script>
+		var numero1 = prompt("Insira o primeiro número: ")
+		
+		if(numero1 > 0){
+			var numero2 = prompt("Insira o segundo número: ")
+			if((numero2 % 2) > 0){
+				var resultadoDivisao = divida(numero1, numero2)
+				if(isNaN(resultadoDivisao)){
+			alert("tente novamente")
+			}else{
+				alert("o resultado da divisão é: " + resultadoDivisao)
+				numero1, numero2 = 0;
+				}
+			}else{
+				alert("Número inválido, tente novamente.")
+				prompt("Insira o segundo número: ")
+			}
+		} else{
+			alert("Número inválido, tente novamente.")
+		}
+		
+		
+		function divida(numero1,numero2) {
+			var resultado = numero1/numero2
+			return resultado
+		}
+		
+	</script>
+</html>

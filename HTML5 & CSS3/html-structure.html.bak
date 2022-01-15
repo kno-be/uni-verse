@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang = 'en'>
+	<head>
+			<meta charset = 'utf-8'>
+			<title>Primeira aula de HTML</title>
+	</head>
+	<body>
+		<header>Cabeçalho da página</header>
+		<nav>Barra de navegação</nav>
+		<main>
+			Conteudo da página
+			<aside>Barra lateral</aside>
+		</main>
+		
+		<footer>Rodapé</footer>
+	</body>
+</html>
