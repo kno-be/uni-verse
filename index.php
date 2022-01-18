@@ -14,7 +14,7 @@
 
     $conn = null;
     //Criar Database
-    //Criar Table
+    //Criar Table 
     //Pedir entrada do usuário
     //Tratar input do prompt
     //Executar operação desejada
