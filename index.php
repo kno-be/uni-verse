@@ -1,9 +1,10 @@
 <?php
-    //Declarar variaveis
+    //declaring variables
     $servername = "localhost";
     $user = "root";
     $pass = "123654be";
-    //Conectar tratando excessoes
+
+    //Treating connection exceptions
     try {
         $conn = new PDO("mysql:host=$servername;dbname=test", $user, $pass);
         $conn -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -12,11 +13,11 @@
         echo "Connection failed  " . $e->getMessage();
     }
 
-    $conn = null;
-    //Criar Database
+    //Database creation
     //Criar Table 
     //Pedir entrada do usuário
     //Tratar input do prompt
     //Executar operação desejada
-    //
+    
+    $conn = null; // Closing connection
 ?>
